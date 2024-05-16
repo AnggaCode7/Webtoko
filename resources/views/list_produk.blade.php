@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<script src="https://cdn.tailwindcss.com"></script>
 <div class="ml-20 mr-20 mb-20 mt-20">
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200">
@@ -33,6 +34,28 @@
             {{ $data->links() }}
         </div>
     </div>
+</div>
+
+
+
+<div class="max-w-4xl mb-20 mx-auto bg-white p-8 rounded-lg shadow-md">
+    <h1 class="text-2xl text-center font-bold mb-6">Input Produk</h1>
+    <form method="POST" action="{{ route('produk.simpan') }}">
+        @csrf
+        <div class="mb-4">
+            <label for="nama" class="block text-gray-700 font-semibold mb-2">Nama:</label>
+            <input type="text" id="nama" name="nama" class="form-control w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <div class="mb-4">
+            <label for="deskripsi" class="block text-gray-700 font-semibold mb-2">Deskripsi:</label>
+            <textarea id="deskripsi" name="deskripsi" class="form-control w-full p-2 border border-gray-300 rounded-md"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="harga" class="block text-gray-700 font-semibold mb-2">Harga:</label>
+            <input type="number" id="harga" name="harga" class="form-control w-full p-2 border border-gray-300 rounded-md">
+        </div>
+        <button type="submit" class="btn-primary w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Simpan</button>
+    </form>
 </div>
 </body>
 </html>
