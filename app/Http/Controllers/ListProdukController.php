@@ -19,8 +19,6 @@ class ListProdukController extends Controller
 
         return view('list_produk', compact('nama', 'desc', 'harga', 'data'));
     }
-<<<<<<< Updated upstream
-=======
 
     public function simpan(Request $request)
     {
@@ -44,5 +42,4 @@ class ListProdukController extends Controller
             return redirect()->back()->with('error', 'Produk tidak ditemukan.');
         }
     }
->>>>>>> Stashed changes
 }

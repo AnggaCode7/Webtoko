@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<<<<<<< Updated upstream
-=======
 <script src="https://cdn.tailwindcss.com"></script>
 
 <div class="max-w-4xl mt-10 mb-20 mx-auto bg-white p-8 rounded-lg shadow-md">
@@ -31,7 +29,6 @@
     </form>
 </div>
 
->>>>>>> Stashed changes
 <div class="ml-20 mr-20 mb-20 mt-20">
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border border-gray-200">
@@ -41,10 +38,7 @@
                     <th class="px-6 py-3 border-b-2 border-r-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Nama Produk</th>
                     <th class="px-6 py-3 border-b-2 border-r-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Deskripsi Produk</th>
                     <th class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Harga Produk</th>
-<<<<<<< Updated upstream
-=======
                     <th class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Action</th>
->>>>>>> Stashed changes
                 </tr>
             </thead>
             <tbody class="bg-white">
@@ -53,9 +47,6 @@
                     <td class="px-6 py-4 border-b border-r-2 border-gray-200 text-center">{{ $data->firstitem() + $index }}</td>
                     <td class="px-6 py-4 border-b border-r-2 border-gray-200 text-sm">{{ $item }}</td>
                     <td class="px-6 py-4 border-b border-r-2 border-gray-200 text-sm">{{ $desc[$index] }}</td>
-<<<<<<< Updated upstream
-                    <td class="px-6 py-4 border-b border-gray-200 text-sm">Rp. {{ $harga[$index] }}</td>
-=======
                     <td class="px-6 py-4 border-b border-r-2 border-gray-200 text-sm">Rp. {{ $harga[$index] }}</td>
                     <td class="px-6 py-4 border-b border-gray-200 text-center">
                         <form action="{{ route('produk.delete', $data[$index]->id) }}" method="POST">
@@ -64,7 +55,6 @@
                             <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700" onclick="return confirm('Are you sure you want to delete {{ $item }}?')">Delete</button>
                         </form>
                     </td>
->>>>>>> Stashed changes
                 </tr>
                 @endforeach
             </tbody>
